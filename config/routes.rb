@@ -1,19 +1,15 @@
 Template::Application.routes.draw do
 
 
+  get "users/show"
+
   get "home/index"
   
   root :to => "home#index"
 
   devise_for :users
   
-  # match 'users/sign_up' => 'registrations#new'
-
-  # resources :registrations do
-  #   member do
-  #     get 'cancel'
-  #   end
-  # end
+  resources :users, :only => "show"
   
 
   # The priority is based upon order of creation:
