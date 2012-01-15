@@ -13,7 +13,7 @@ feature "A Visitor" do
     fill_in "Password", :with => "password"
     fill_in "Password confirmation", :with => "password"
     click_button "Sign up"
-    page.should have_content("Signed in as visitor@example.com")
+    page.should have_content("visitor@example.com")
     page.should have_content("Welcome! You have signed up successfully.")
     click_link "Sign out"
     page.should have_content("Signed out successfully.")
@@ -37,7 +37,7 @@ feature "A User" do
   
   scenario "should be able to login" do
     page.should have_content("Signed in successfully.")
-    page.should have_content("Signed in as mikecowden@example.com.")
+    page.should have_content("mikecowden@example.com")
   end
   
   scenario "should be able to logout" do

@@ -6,6 +6,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'devise'
 gem 'factory_girl'
+gem 'web-app-theme', '~> 0.8.0'
 
 # Gems used only for assets and not required
 # in production environments by default.

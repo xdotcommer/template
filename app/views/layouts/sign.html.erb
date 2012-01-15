@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web App</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div id="container" style="width:800px; margin:0 auto; text-align: center;">
+    <div id="box">
+      <%= yield %>            
+    </div>
+    <div class="flash">
+      <% flash.each do |type, message| -%>
+        <div class="message <%= type %>">
+          <p><%= message %></p>
+        </div>
+      <% end -%>
+    </div>
+  </div>
+</body>
+</html>
