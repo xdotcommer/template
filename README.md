@@ -34,23 +34,23 @@ To get started just:
 
 Sample `config/database.yml`
 
-		standard: &standard
-			adapter: postgresql
-			host: localhost
-			username: username
-			password: password
-			port: 5432
-			pool: 5
-			timeout: 5000
-		
-		development:
-		  database: template_development
-		  <<: *standard
+	standard: &standard
+		adapter: postgresql
+		host: localhost
+		username: username
+		password: password
+		port: 5432
+		pool: 5
+		timeout: 5000
+	
+	development:
+	  database: template_development
+	  <<: *standard
 
-		test:
-		  database: template_test
-		  <<: *standard
+	test:
+	  database: template_test
+	  <<: *standard
 
-		production:
-		  database: template_production
-		  <<: *standard
+	production:
+	  database: template_production
+	  <<: *standard
