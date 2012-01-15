@@ -25,8 +25,32 @@ The project is all setup with a user signup & login flow (slightly modified from
 
 To get started just:
 
-* `clone https://github.com/xdotcommer/template.git my_project`
+* `git clone https://github.com/xdotcommer/template.git my_project`
 * `cd my_project ; rm -rf .git` make it your own!
 * `bundle` set up the gems
-* `rake db:create & rake db:migrate & rake` setup the database and run the tests
+* setup your database.yml (example listed below)
+* `rake db:create ; rake db:migrate ; rake` setup the database and run the tests
 * `rails server` and have a look...
+
+Sample `config/database.yml`
+
+		standard: &standard
+			adapter: postgresql
+			host: localhost
+			username: username
+			password: password
+			port: 5432
+			pool: 5
+			timeout: 5000
+		
+		development:
+		  database: template_development
+		   <<: *standard
+
+		test:
+		  database: template_test
+		   <<: *standard
+
+		production:
+		  database: template_production
+		   <<: *standard
