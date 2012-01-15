@@ -45,12 +45,12 @@ Sample `config/database.yml`
 		
 		development:
 		  database: template_development
-		   <<: *standard
+		  <<: *standard
 
 		test:
 		  database: template_test
-		   <<: *standard
+		  <<: *standard
 
 		production:
 		  database: template_production
-		   <<: *standard
+		  <<: *standard
